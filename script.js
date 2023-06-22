@@ -9,9 +9,9 @@ $(document).ready(function () {
 
     // change name in navbar
     if (this.scrollY > 1000) {
-      document.querySelector(".logo a").innerHTML = "Mani<span>deep</span>"
+      document.querySelector(".logo a").innerHTML = "Portfolio"
     } else {
-      document.querySelector(".logo a").innerHTML = "Portfo<span>lio</span>"
+      document.querySelector(".logo a").innerHTML = "Portfolio"
     }
 
     // scroll-up button show/hide script
@@ -41,14 +41,14 @@ $(document).ready(function () {
 
   // typing text animation script
   var typed = new Typed(".typing", {
-    strings: ["Developer", "Writer", "Designer"],
+    strings: ["Full Stack Web Developer","Programming Enthusiast"],
     typeSpeed: 100,
     backSpeed: 60,
     loop: true,
   });
 
   var typed = new Typed(".typing-2", {
-    strings: ["Developer", "Writer", "Designer"],
+    strings: ["Full Stack Web Developer","Programming Enthusiast"],
     typeSpeed: 100,
     backSpeed: 60,
     loop: true,
