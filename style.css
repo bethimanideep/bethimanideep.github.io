@@ -1,5 +1,12 @@
 /*  import google fonts */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
+.project-title{
+  color: #007FFF;
+}
+.separator {
+  color:rgba(25, 216, 41, 0.418);
+  font-weight: bold;
+}
 
 * {
   margin: 0;
@@ -91,7 +98,7 @@ section .title::before {
   left: 50%;
   width: 180px;
   height: 3px;
-  background: blue;
+  background: #007FFF;
   transform: translateX(-50%);
   /* margin-top: -60px; */
 }
@@ -484,11 +491,11 @@ section .title::after {
   height: 40%;
   object-fit: contain;
 }
-
+/* 
 p.project-description {
-  height: 50%;
+  height: 30%;
   text-align: justify;
-}
+} */
 
 /* .projects .serv-content .card:hover .box {
   transform: scale(1.05);
@@ -1154,20 +1161,20 @@ footer span a:hover {
   border: none;
   cursor: pointer;
   background-color: transparent;
-  color: white;
+  color:whitesmoke;
   background-origin: border-box;
   touch-action: manipulation;
-  border: 1.5px solid blue;
+  /* border: 1.5px solid blue; */
   font-weight: 600;
   margin-right: 16px;
   transition: all 0.3s ease;
+  background-color: #007FFF;
 }
 
 .liveBtn:hover {
   /* box-shadow: 0px 0.5px 1.5px rgba(255, 0, 0),
     inset 0px 0.8px 0px -0.25px rgb(255, 0, 0); */
   /* box-shadow: rgb(214 3 3 / 77%) 0px 0px 0px 1px; */
-  background-color: blue;
   /* background-color: #f1f1f1;
   border: 2px solid #2253c8;
   color: #333; */

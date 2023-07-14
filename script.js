@@ -41,14 +41,14 @@ $(document).ready(function () {
 
   // typing text animation script
   var typed = new Typed(".typing", {
-    strings: ["Full Stack Web Developer","Programming Enthusiast"],
+    strings: ["Full Stack Web Developer", "Programming Enthusiast"],
     typeSpeed: 100,
     backSpeed: 60,
     loop: true,
   });
 
   var typed = new Typed(".typing-2", {
-    strings: ["Full Stack Web Developer","Programming Enthusiast"],
+    strings: ["Full Stack Web Developer", "Programming Enthusiast"],
     typeSpeed: 100,
     backSpeed: 60,
     loop: true,
@@ -77,3 +77,8 @@ $(document).ready(function () {
     },
   });
 });
+
+var contents = document.getElementsByClassName("content");
+for (var i = 0; i < contents.length; i++) {
+  contents[i].innerHTML = contents[i].innerHTML.replace(/\|/g, '<span class="separator">|</span>');
+}
