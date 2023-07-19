@@ -1,10 +1,12 @@
 /*  import google fonts */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
-.project-title{
+
+.project-title {
   color: #007FFF;
 }
+
 .separator {
-  color:rgba(25, 216, 41, 0.418);
+  color: rgba(25, 216, 41, 0.418);
   font-weight: bold;
 }
 
@@ -305,14 +307,14 @@ section .title::after {
 }
 
 .about .about-content .left img {
-    box-sizing: border-box;
-    overflow: hidden;
-    object-fit: contain;
-    /* border: 4.5px solid blue; */
-    padding-right: 14px;
-    /* background-color: #272937; */
-    border-radius: 10px;
-    filter: grayscale(20%);
+  box-sizing: border-box;
+  overflow: hidden;
+  object-fit: contain;
+  /* border: 4.5px solid blue; */
+  padding-right: 14px;
+  /* background-color: #272937; */
+  border-radius: 10px;
+  filter: grayscale(20%);
 }
 
 .about .about-content .left::before {
@@ -325,7 +327,7 @@ section .title::after {
   left: 2px;
   top: 47px;
   /* z-index: 20; */
- /* border-bottom-right-radius: 5px; */
+  /* border-bottom-right-radius: 5px; */
 
 }
 
@@ -340,7 +342,7 @@ section .title::after {
   right: 2px;
   bottom: 47px;
   /* z-index: 20; */
- /* border-bottom-right-radius: 5px; */
+  /* border-bottom-right-radius: 5px; */
 
 }
 
@@ -491,6 +493,7 @@ section .title::after {
   height: 40%;
   object-fit: contain;
 }
+
 /* 
 p.project-description {
   height: 30%;
@@ -1037,8 +1040,7 @@ footer span a:hover {
   }
 }
 
-@media (min-width: 700px) and (max-width:947px)
-{
+@media (min-width: 700px) and (max-width:947px) {
   .about .about-content .left img {
     height: 90%;
   }
@@ -1161,7 +1163,7 @@ footer span a:hover {
   border: none;
   cursor: pointer;
   background-color: transparent;
-  color:whitesmoke;
+  color: whitesmoke;
   background-origin: border-box;
   touch-action: manipulation;
   /* border: 1.5px solid blue; */
@@ -1251,3 +1253,73 @@ footer>span>i {
 /* video::-webkit-media-controls {
   display: none;
 } */
+
+
+.projects .serv-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.projects .serv-content .card {
+  width: 100%;
+  background: #272937;
+  text-align: center;
+  border-radius: 6px;
+  padding: 30px 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.projects .serv-content .card .box {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.projects .serv-content .card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.projects .serv-content .card .text {
+  font-size: 25px;
+  font-weight: 500;
+  margin: 20px 0px;
+}
+
+.projects .serv-content .card p {
+  text-align: justify;
+}
+
+.projects .serv-content .card .button-area {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.projects .serv-content .card .button-area button {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.projects .serv-content .card .button-area button:hover {
+  background: #2253c8;
+}
+
+/* Adjust the button sizes for smaller screens */
+@media (max-width: 690px) {
+  .projects .serv-content .card .button-area button {
+    padding: 10px 15px;
+  }
+}
