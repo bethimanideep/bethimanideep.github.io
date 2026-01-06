@@ -1,73 +1,153 @@
-# Welcome to your Lovable project
+# 👨‍💻 Bethima Nideep - Portfolio
 
-## Project info
+Welcome to my personal portfolio website! This is a modern, fully responsive React application showcasing my projects, skills, and experience as a developer.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## 🌟 Features
 
-## How can I edit this code?
+- **Responsive Design** - Beautiful UI that works seamlessly on all devices
+- **Dark/Light Theme** - Toggle between light and dark modes
+- **Projects Showcase** - Interactive display of my featured projects
+- **Skills Section** - Comprehensive overview of my technical expertise
+- **Contact Section** - Easy way to get in touch with me
+- **Smooth Navigation** - Elegant navigation with smooth scrolling
 
-There are several ways of editing your application.
+## 🛠️ Tech Stack
 
-**Use Lovable**
+This project is built with modern technologies:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+| Technology | Purpose |
+|---|---|
+| **React** | UI Framework |
+| **TypeScript** | Type-safe development |
+| **Vite** | Fast build tool and dev server |
+| **Tailwind CSS** | Utility-first styling |
+| **shadcn/ui** | Beautiful, accessible UI components |
+| **Radix UI** | Headless UI components |
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🚀 Quick Start
 
-**Use your preferred IDE**
+### Prerequisites
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- Node.js (v16 or higher)
+- npm or yarn
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Installation
 
-Follow these steps:
+```bash
+# Clone the repository
+git clone https://github.com/bethimanideep/bethimanideep.github.io.git
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Navigate to the project directory
+cd bethimanideep.github.io
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Install dependencies
+npm install
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start the development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The application will open at `http://localhost:5173`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 📝 Available Scripts
 
-**Use GitHub Codespaces**
+```bash
+# Start development server with hot reload
+npm run dev
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+# Build for production
+npm run build
 
-## What technologies are used for this project?
+# Build for development
+npm run build:dev
 
-This project is built with:
+# Preview the production build
+npm preview
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+# Lint the code
+npm run lint
+```
 
-## How can I deploy this project?
+## 📂 Project Structure
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+```
+src/
+├── components/          # Reusable React components
+│   ├── ui/             # shadcn/ui components
+│   ├── AboutSection.tsx
+│   ├── ContactSection.tsx
+│   ├── HeroSection.tsx
+│   ├── Navigation.tsx
+│   ├── ProjectsSection.tsx
+│   ├── SkillsSection.tsx
+│   └── Footer.tsx
+├── pages/              # Page components
+│   ├── Index.tsx
+│   └── NotFound.tsx
+├── context/            # React Context
+│   └── ThemeContext.tsx
+├── hooks/              # Custom hooks
+├── lib/                # Utility functions
+├── App.tsx             # Root component
+├── main.tsx            # Entry point
+└── index.css           # Global styles
+```
 
-## Can I connect a custom domain to my Lovable project?
+## 🎨 Customization
 
-Yes, you can!
+The portfolio uses Tailwind CSS for styling and supports light/dark themes. You can customize:
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+- **Theme** - Toggle between dark and light modes using the theme toggle button
+- **Colors** - Modify Tailwind config in `tailwind.config.ts`
+- **Components** - Edit components in `src/components/`
+- **Content** - Update text and images in respective component files
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## 🔧 Development
+
+### Working with the Code
+
+You have multiple options:
+
+1. **Local Development** - Clone and edit with your preferred IDE
+2. **GitHub Web Editor** - Click the pencil icon on any file to edit directly
+3. **GitHub Codespaces** - Develop in the browser with a full dev environment
+
+### Making Changes
+
+```bash
+# Make your changes, then:
+git add .
+git commit -m "Your commit message"
+git push origin main
+```
+
+## 📦 Deployment
+
+The site is deployed and accessible at: **https://bethimanideep.github.io**
+
+To deploy your own version:
+
+1. Push changes to the `main` branch
+2. GitHub Pages will automatically build and deploy
+
+## 📁 Projects
+
+This portfolio showcases several projects:
+
+- **BShub** - [View](public/projects/bshub/)
+- **Certidigital** - [View](public/projects/certidigital/)
+- **DocBot AI** - [View](public/projects/docbot-ai/)
+- **Grab and Go** - [View](public/projects/grab-and-go/)
+- **Legit Lawyer** - [View](public/projects/legit-lawyer/)
+
+## 📞 Get In Touch
+
+Feel free to reach out! You can contact me through the contact section on the website or through my social media profiles.
+
+## 📄 License
+
+This project is open source and available under the MIT License.
+
+---
+
+**Made with ❤️ by Bethima Nideep**
