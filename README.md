@@ -1,4 +1,4 @@
-# 👨‍💻 Bethima Nideep - Portfolio
+# 👨‍💻 Bethi Manideep - Portfolio
 
 Welcome to my personal portfolio website! This is a modern, fully responsive React application showcasing my projects, skills, and experience as a developer.
 
@@ -150,4 +150,4 @@ This project is open source and available under the MIT License.
 
 ---
 
-**Made with ❤️ by Bethima Nideep**
+**Made with ❤️ by Bethi Manideep**
