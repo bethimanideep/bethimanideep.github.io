@@ -53,9 +53,10 @@ export function Navigation() {
             {/* Logo */}
             <a
               href="#"
-              className="font-display text-2xl font-bold tracking-tight text-foreground hover:text-primary transition-colors"
+              className="group font-display text-2xl font-bold tracking-tight text-foreground hover:text-primary transition-colors relative"
             >
-              Portfolio
+              <span className="relative z-10">Portfolio</span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-primary group-hover:w-full transition-all duration-300" />
             </a>
 
             {/* Desktop Menu */}
@@ -64,9 +65,10 @@ export function Navigation() {
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-muted-foreground hover:text-foreground transition-colors text-sm tracking-wide"
+                  className="group relative text-muted-foreground hover:text-foreground transition-colors text-sm tracking-wide font-medium"
                 >
-                  {link.name}
+                  <span className="relative z-10">{link.name}</span>
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300" />
                 </a>
               ))}
 

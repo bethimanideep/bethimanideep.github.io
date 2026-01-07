@@ -125,9 +125,12 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
   };
 
   return (
-    <div className="group rounded-2xl bg-card border border-border overflow-hidden hover:border-primary/30 transition-all duration-500 hover:shadow-xl hover:shadow-primary/5">
+    <div className="group relative rounded-3xl bg-card/50 border border-border overflow-hidden hover:border-primary/50 transition-all duration-500 hover-lift">
+      {/* Glow effect on hover */}
+      <div className="absolute -inset-0.5 bg-gradient-primary opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500 rounded-3xl" />
+      
       {/* Project Image/Visual */}
-      <div className="aspect-video bg-gradient-to-br from-primary/30 via-primary/10 to-transparent relative overflow-hidden">
+      <div className="relative aspect-video bg-gradient-to-br from-primary/30 via-primary/10 to-transparent overflow-hidden">
         {images.length > 0 ? (
           <>
             {/* Previous image (exiting) */}
@@ -210,16 +213,16 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
         )}
 
         {/* Hover Overlay */}
-        <div className="absolute inset-0 bg-background/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4 pointer-events-none group-hover:pointer-events-auto">
-          <Button variant="hero" size="sm" asChild>
+        <div className="absolute inset-0 bg-background/90 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4 pointer-events-none group-hover:pointer-events-auto">
+          <Button variant="hero" size="lg" asChild className="group/btn">
             <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-              <ExternalLink size={16} />
+              <ExternalLink size={18} className="group-hover/btn:rotate-45 transition-transform duration-300" />
               Live Demo
             </a>
           </Button>
-          <Button variant="outline" size="sm" asChild>
+          <Button variant="outline" size="lg" asChild className="group/btn border-2">
             <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-              <Github size={16} />
+              <Github size={18} className="group-hover/btn:scale-110 transition-transform duration-300" />
               Code
             </a>
           </Button>
@@ -227,18 +230,18 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
       </div>
 
       {/* Project Info */}
-      <div className="p-6">
-        <h3 className="font-display text-xl font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
+      <div className="relative z-10 p-6 bg-card/80 backdrop-blur-sm">
+        <h3 className="font-display text-2xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
           {project.title}
         </h3>
-        <p className="text-muted-foreground font-body text-sm mb-4 leading-relaxed">
+        <p className="text-muted-foreground font-body text-sm mb-5 leading-relaxed">
           {project.description}
         </p>
         <div className="flex flex-wrap gap-2">
           {project.tags.map((tag) => (
             <span
               key={tag}
-              className="px-3 py-1 text-xs font-body rounded-full bg-secondary text-muted-foreground"
+              className="px-3 py-1.5 text-xs font-body rounded-full bg-primary/10 text-primary border border-primary/20 hover:bg-primary hover:text-primary-foreground transition-all duration-300"
             >
               {tag}
             </span>
@@ -251,19 +254,26 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
 
 export function ProjectsSection() {
   return (
-    <section id="projects" className="py-24 md:py-32">
-      <div className="container mx-auto px-6">
-        <div className="max-w-6xl mx-auto">
+    <section id="projects" className="py-24 md:py-32 relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0 bg-gradient-subtle opacity-20" />
+      <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-1/4 left-0 w-80 h-80 bg-accent/5 rounded-full blur-3xl" />
+
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="max-w-7xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <p className="text-primary font-body tracking-widest uppercase text-sm mb-4">
-              Portfolio
-            </p>
-            <h2 className="font-display text-4xl md:text-5xl font-semibold mb-6">
-               <span className="text-gradient">Featured Projects</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-4">
+              <p className="text-primary font-body tracking-widest uppercase text-sm font-medium">
+                Portfolio
+              </p>
+            </div>
+            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+              <span className="text-gradient">Featured Projects</span>
             </h2>
-            <p className="text-muted-foreground font-body max-w-2xl mx-auto">
-              ✨ List of projects that showcase my skills and passion. ✨
+            <p className="text-muted-foreground font-body max-w-2xl mx-auto text-lg">
+              A collection of projects that showcase my skills, creativity, and passion for building exceptional digital experiences
             </p>
           </div>
 
@@ -275,9 +285,10 @@ export function ProjectsSection() {
           </div>
 
           {/* View More */}
-          <div className="text-center mt-12">
-            <Button variant="heroOutline" size="lg">
-              View All Projects
+          <div className="text-center mt-16">
+            <Button variant="heroOutline" size="lg" className="group">
+              <span>View All Projects</span>
+              <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300">→</span>
             </Button>
           </div>
         </div>
