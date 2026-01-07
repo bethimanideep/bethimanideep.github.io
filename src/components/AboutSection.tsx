@@ -37,7 +37,7 @@ export function AboutSection() {
                   {/* <span className="font-display text-8xl text-primary/30">MB</span> */}
 
                   <img
-                    src="/public/Mani.jpg"   // put your image in /public/images/
+                    src="/dist/Mani.jpg"   // put your image in /public/images/
                     alt="My photo"
                     className="w-full h-full object-cover rounded-2xl"
                   />
