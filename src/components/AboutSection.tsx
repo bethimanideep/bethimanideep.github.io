@@ -22,7 +22,7 @@ export function AboutSection() {
   return (
     <section id="about" className="py-24 md:py-32 relative">
       <div className="absolute inset-0 bg-gradient-subtle opacity-50" />
-      
+
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -34,28 +34,32 @@ export function AboutSection() {
                   <div className="w-48 h-48 rounded-full bg-gradient-primary opacity-20 blur-2xl" />
                 </div>
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="font-display text-8xl text-primary/30">MB</span>
+                  {/* <span className="font-display text-8xl text-primary/30">MB</span> */}
+
+                  <img
+                    src="/public/Mani.jpg"   // put your image in /public/images/
+                    alt="My photo"
+                    className="w-full h-full object-cover rounded-2xl"
+                  />
                 </div>
               </div>
-              
-              {/* Decorative Elements */}
-              <div className="absolute -top-4 -right-4 w-24 h-24 border-2 border-primary/30 rounded-2xl" />
-              <div className="absolute -bottom-4 -left-4 w-32 h-32 border-2 border-primary/20 rounded-2xl" />
-            </div>
+
             
+            </div>
+
             {/* Content Side */}
             <div>
               <p className="text-primary font-body tracking-widest uppercase text-sm mb-4">
                 About Me
               </p>
               <h2 className="font-display text-4xl md:text-4xl font-semibold mb-6">
-                
+
                 <span className="text-gradient block">Transform Ideas Into Reality</span>
               </h2>
-              
+
               <div className="space-y-4 text-muted-foreground font-body leading-relaxed mb-8">
                 <p>
-                  As a Software Engineer at Reva Solutions, I specialize in building 
+                  As a Software Engineer at Reva Solutions, I specialize in building
                   full-stack applications with modern technologies including React, Next.js, Node.js, and AI/LLM frameworks.
                   My expertise spans frontend development, backend engineering, cloud solutions, and AI-powered applications.
                 </p>
@@ -65,7 +69,7 @@ export function AboutSection() {
                   delivering scalable, secure solutions that create real business value.
                 </p>
               </div>
-              
+
               {/* Highlights */}
               <div className="grid gap-6">
                 {highlights.map((item, index) => (

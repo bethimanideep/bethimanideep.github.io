@@ -59,7 +59,7 @@ export function ContactSection() {
                <span className="text-gradient">Let's Work Together</span>
             </h2>
             <p className="text-muted-foreground font-body max-w-2xl mx-auto">
-               ✨ Great things happen when we collaborate. Lets Connect 🫴
+               ✨ Great things happen when we collaborate. ✨
             </p>
           </div>
 
