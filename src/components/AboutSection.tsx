@@ -37,14 +37,15 @@ export function AboutSection() {
                   {/* <span className="font-display text-8xl text-primary/30">MB</span> */}
 
                   <img
-                    src="/dist/Mani.jpg"   // put your image in /public/images/
+                    src="https://lh3.googleusercontent.com/d/1nm39eC6WZJAWDFEVdsTGEbyhUp83l9o9"
                     alt="My photo"
                     className="w-full h-full object-cover rounded-2xl"
                   />
+
                 </div>
               </div>
 
-            
+
             </div>
 
             {/* Content Side */}

@@ -54,7 +54,7 @@ export function HeroSection() {
           {/* Social Links */}
           <div className="flex justify-center gap-6 animate-fade-up opacity-0" style={{ animationDelay: "1s", animationFillMode: "forwards" }}>
             {[
-              { icon: Github, href: "https://bethimanideep.github.io/", label: "GitHub" },
+              { icon: Github, href: "https://github.com/bethimanideep", label: "GitHub" },
               { icon: Linkedin, href: "https://in.linkedin.com/in/manideepbethi", label: "LinkedIn" },
               { icon: Twitter, href: "#", label: "Twitter" },
             ].map(({ icon: Icon, href, label }) => (
