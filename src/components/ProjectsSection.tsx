@@ -212,21 +212,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
           </div>
         )}
 
-        {/* Hover Overlay */}
-        <div className="absolute inset-0 bg-background/90 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4 pointer-events-none group-hover:pointer-events-auto">
-          <Button variant="hero" size="lg" asChild className="group/btn">
-            <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-              <ExternalLink size={18} className="group-hover/btn:rotate-45 transition-transform duration-300" />
-              Live Demo
-            </a>
-          </Button>
-          <Button variant="outline" size="lg" asChild className="group/btn border-2">
-            <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-              <Github size={18} className="group-hover/btn:scale-110 transition-transform duration-300" />
-              Code
-            </a>
-          </Button>
-        </div>
+
       </div>
 
       {/* Project Info */}
@@ -237,7 +223,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
         <p className="text-muted-foreground font-body text-sm mb-5 leading-relaxed">
           {project.description}
         </p>
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2 mb-6">
           {project.tags.map((tag) => (
             <span
               key={tag}
@@ -246,6 +232,22 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
               {tag}
             </span>
           ))}
+        </div>
+
+        {/* Action Buttons */}
+        <div className="flex gap-4">
+          <Button variant="hero" size="lg" asChild className="group/btn flex-1">
+            <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+              <ExternalLink size={18} className="group-hover/btn:rotate-45 transition-transform duration-300" />
+              Live Demo
+            </a>
+          </Button>
+          <Button variant="outline" size="lg" asChild className="group/btn flex-1 border-2">
+            <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+              <Github size={18} className="group-hover/btn:scale-110 transition-transform duration-300" />
+              Code
+            </a>
+          </Button>
         </div>
       </div>
     </div>

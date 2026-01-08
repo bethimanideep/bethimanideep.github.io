@@ -53,9 +53,15 @@ export function Navigation() {
             {/* Logo */}
             <a
               href="#"
-              className="group font-display text-2xl font-bold tracking-tight text-foreground hover:text-primary transition-colors relative"
+              className="group flex items-center gap-2 font-display font-bold tracking-tight text-foreground hover:text-primary transition-colors relative"
             >
-              <span className="relative z-10">Portfolio</span>
+              {/* Logo initials circle */}
+              <div className="w-10 h-10 rounded-lg bg-gradient-primary/20 border border-primary/40 flex items-center justify-center group-hover:border-primary/80 group-hover:bg-gradient-primary/30 transition-all duration-300">
+                <span className="text-sm font-bold text-primary">MB</span>
+              </div>
+              
+             
+              
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-primary group-hover:w-full transition-all duration-300" />
             </a>
 

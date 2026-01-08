@@ -94,7 +94,7 @@ export function HeroSection() {
           </div>
           
           <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold mb-6 animate-fade-up opacity-0 leading-tight" style={{ animationDelay: "0.3s", animationFillMode: "forwards" }}>
-            <RollingText text={"✨ I'm Manideep"} className="text-gradient" />
+            ✨<RollingText text={" I'm Manideep"} className="text-gradient" />
           </h1>
           
           <div className="relative inline-block mb-4">
