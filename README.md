@@ -1,6 +1,6 @@
 # 👨‍💻 Bethi Manideep - Portfolio
 
-Welcome to my personal portfolio website! This is a modern, fully responsive React application showcasing my projects, skills, and experience as a developer.
+Welcome to my personal portfolio website! This is a modern, fully responsive React application showcasing my projects, skills, and experience as a developer..
 
 ## 🌟 Features
 
