@@ -55,9 +55,9 @@ export function Navigation() {
               href="#"
               className="group flex items-center gap-2 font-display font-bold tracking-tight text-foreground hover:text-primary transition-colors relative"
             >
-              {/* Logo initials circle */}
-              <div className="w-10 h-10 rounded-lg bg-gradient-primary/20 border border-primary/40 flex items-center justify-center group-hover:border-primary/80 group-hover:bg-gradient-primary/30 transition-all duration-300">
-                <span className="text-sm font-bold text-primary">MB</span>
+              {/* Logo icon */}
+              <div className="w-10 h-10 rounded-lg bg-gradient-primary/20 border border-primary/40 overflow-hidden flex items-center justify-center group-hover:border-primary/80 group-hover:bg-gradient-primary/30 transition-all duration-300">
+                <img src="/favicon.ico" alt="Logo" className="w-7 h-7 object-contain" />
               </div>
               
              
