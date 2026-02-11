@@ -1,4 +1,4 @@
-import { ArrowDown, Github, Linkedin, Twitter, Sparkles } from "lucide-react";
+import { Github, Linkedin, Twitter,  } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 
@@ -58,9 +58,9 @@ export function HeroSection() {
   }, []);
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Enhanced Background Elements */}
-      <div className="absolute inset-0 bg-gradient-subtle" />
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden py-20">
+      {/* Enhanced Background Elements - Made transparent to show StarField */}
+      <div className="absolute inset-0 bg-transparent" />
       
       {/* Animated gradient orbs that follow mouse */}
       <div 
@@ -83,63 +83,86 @@ export function HeroSection() {
       {/* Grid Pattern Overlay */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] opacity-30" />
       
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-5xl mx-auto text-center">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card/50 backdrop-blur-sm border border-primary/20 mb-8 animate-fade-up opacity-0" style={{ animationDelay: "0.1s", animationFillMode: "forwards" }}>
-            <Sparkles size={14} className="text-primary" />
-            <p className="text-primary font-body tracking-widest uppercase text-xs font-medium">
-              Welcome to my portfolio
-            </p>
+      <div className="container mx-auto px-6 relative z-10 pt-10 pb-10 lg:pt-0">
+        <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+          {/* Content Side */}
+          <div className="text-center lg:text-left order-2 lg:order-1">
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card/50 backdrop-blur-sm border border-primary/20 mb-8 animate-fade-up opacity-0" style={{ animationDelay: "0.1s", animationFillMode: "forwards" }}>
+              <p className="text-primary font-body tracking-widest uppercase text-xs font-medium">
+              ✨ Welcome to my portfolio
+              </p>
+            </div>
+            
+            <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-up opacity-0 leading-tight" style={{ animationDelay: "0.3s", animationFillMode: "forwards" }}>
+              <RollingText text={" I'm Manideep"} className="text-gradient" />
+            </h1>
+            
+            <div className="relative inline-block mb-4">
+              <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground font-body font-light mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed animate-fade-up opacity-0" style={{ animationDelay: "0.5s", animationFillMode: "forwards" }}>
+                A passionate <span className="text-foreground font-medium relative">
+                  Full-Stack Web Developer
+                  <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-primary opacity-60" />
+                </span>{" "}
+                specializing in modern Web Technologies and AI-powered Solutions
+              </p>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12 animate-fade-up opacity-0" style={{ animationDelay: "0.7s", animationFillMode: "forwards" }}>
+              <Button variant="hero" size="xl" asChild className="group relative overflow-hidden w-full sm:w-auto">
+                <a href="#projects">
+                  <span className="relative z-10">View My Work</span>
+                  <span className="absolute inset-0 bg-gradient-to-r from-primary to-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </a>
+              </Button>
+              <Button variant="heroOutline" size="xl" asChild className="group w-full sm:w-auto">
+                <a href="#contact" className="relative z-10">
+                  Get in Touch
+                </a>
+              </Button>
+            </div>
+            
+            {/* Enhanced Social Links */}
+            <div className="flex justify-center lg:justify-start gap-4 animate-fade-up opacity-0" style={{ animationDelay: "0.9s", animationFillMode: "forwards" }}>
+              {[
+                { icon: Github, href: "https://github.com/bethimanideep", label: "GitHub" },
+                { icon: Linkedin, href: "https://in.linkedin.com/in/manideepbethi", label: "LinkedIn" },
+                { icon: Twitter, href: "#", label: "Twitter" },
+              ].map(({ icon: Icon, href, label }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative p-4 rounded-2xl border border-border/50 bg-card/30 backdrop-blur-sm text-muted-foreground hover:text-primary hover:border-primary/50 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-primary/20"
+                  aria-label={label}
+                >
+                  <Icon size={20} className="relative z-10" />
+                  <span className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity duration-300" />
+                </a>
+              ))}
+            </div>
           </div>
-          
-          <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold mb-6 animate-fade-up opacity-0 leading-tight" style={{ animationDelay: "0.3s", animationFillMode: "forwards" }}>
-            ✨<RollingText text={" I'm Manideep"} className="text-gradient" />
-          </h1>
-          
-          <div className="relative inline-block mb-4">
-            <p className="text-xl md:text-2xl lg:text-3xl text-muted-foreground font-body font-light mb-8 max-w-3xl mx-auto leading-relaxed animate-fade-up opacity-0" style={{ animationDelay: "0.5s", animationFillMode: "forwards" }}>
-              A passionate <span className="text-foreground font-medium relative">
-                Full-Stack Developer
-                <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-primary opacity-60" />
-              </span>{" "}
-              specializing in modern web technologies and AI-powered solutions
-            </p>
-          </div>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 animate-fade-up opacity-0" style={{ animationDelay: "0.7s", animationFillMode: "forwards" }}>
-            <Button variant="hero" size="xl" asChild className="group relative overflow-hidden">
-              <a href="#projects">
-                <span className="relative z-10">View My Work</span>
-                <span className="absolute inset-0 bg-gradient-to-r from-primary to-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </a>
-            </Button>
-            <Button variant="heroOutline" size="xl" asChild className="group">
-              <a href="#contact" className="relative z-10">
-                Get in Touch
-              </a>
-            </Button>
-          </div>
-          
-          {/* Enhanced Social Links */}
-          <div className="flex justify-center gap-4 animate-fade-up opacity-0" style={{ animationDelay: "0.9s", animationFillMode: "forwards" }}>
-            {[
-              { icon: Github, href: "https://github.com/bethimanideep", label: "GitHub" },
-              { icon: Linkedin, href: "https://in.linkedin.com/in/manideepbethi", label: "LinkedIn" },
-              { icon: Twitter, href: "#", label: "Twitter" },
-            ].map(({ icon: Icon, href, label }) => (
-              <a
-                key={label}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative p-4 rounded-2xl border border-border/50 bg-card/30 backdrop-blur-sm text-muted-foreground hover:text-primary hover:border-primary/50 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-primary/20"
-                aria-label={label}
-              >
-                <Icon size={20} className="relative z-10" />
-                <span className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity duration-300" />
-              </a>
-            ))}
+
+          {/* Image Side */}
+          <div className="order-1 lg:order-2 animate-fade-up opacity-0" style={{ animationDelay: "0.5s", animationFillMode: "forwards" }}>
+            <div className="relative group max-w-sm sm:max-w-sm lg:max-w-md mx-auto">
+              <div className="absolute -inset-4 bg-gradient-primary rounded-3xl opacity-20 blur-2xl group-hover:opacity-40 transition-opacity duration-500" />
+              <div className="relative aspect-square rounded-3xl bg-secondary/30 overflow-hidden border border-border/50 backdrop-blur-sm">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-accent/20" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-48 h-48 rounded-full bg-gradient-primary opacity-10 blur-3xl animate-pulse-glow" />
+                </div>
+                <img
+                  src="/Mani.jpg"
+                  alt="Manideep Bethi"
+                  className="relative z-10 w-full h-full object-cover rounded-2xl transform group-hover:scale-105 transition-transform duration-700 shadow-2xl"
+                />
+                {/* Decorative corner elements */}
+                <div className="absolute top-2 left-2 w-12 h-12 border-t-2 border-l-2 border-primary/30 rounded-tl-2xl z-20" />
+                <div className="absolute bottom-2 right-2 w-12 h-12 border-b-2 border-r-2 border-accent/30 rounded-br-2xl z-20" />
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -149,15 +172,6 @@ export function HeroSection() {
         href="#about"
         className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors group"
       >
-        <span className="text-xs font-body tracking-wider uppercase opacity-70 group-hover:opacity-100 transition-opacity">
-          Scroll
-        </span>
-        <div className="relative">
-          <ArrowDown size={24} className="animate-float" />
-          <div className="absolute inset-0 animate-ping opacity-20">
-            <ArrowDown size={24} />
-          </div>
-        </div>
       </a>
     </section>
   );

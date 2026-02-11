@@ -47,7 +47,7 @@ npm install
 npm run dev
 ```
 
-The application will open at `http://localhost:5173`
+The application will open at `http://localhost:8080`
 
 ## 📝 Available Scripts
 
@@ -123,7 +123,7 @@ git push origin main
 
 ## 📦 Deployment
 
-The site is deployed and accessible at: **https://bethimanideep.github.io**
+The site is deployed and accessible at: **https://bethimanideep.github.io/**
 
 To deploy your own version:
 

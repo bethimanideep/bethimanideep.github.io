@@ -451,3 +451,18 @@ html {
   background-size: 200px 100%;
   animation: skeleton-loading 1.5s infinite;
 }
+
+/* Audio Visualizer Animation */
+@keyframes music-bar {
+  0%, 100% {
+    transform: scaleY(0.3);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+.animate-music-bar {
+  animation: music-bar 0.8s ease-in-out infinite;
+  transform-origin: bottom;
+}

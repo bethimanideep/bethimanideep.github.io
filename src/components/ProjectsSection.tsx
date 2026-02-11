@@ -256,7 +256,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
 
 export function ProjectsSection() {
   return (
-    <section id="projects" className="py-24 md:py-32 relative overflow-hidden">
+    <section id="projects" className="py-10 md:py-10 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-subtle opacity-20" />
       <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
@@ -274,9 +274,6 @@ export function ProjectsSection() {
             <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               <span className="text-gradient">Featured Projects</span>
             </h2>
-            <p className="text-muted-foreground font-body max-w-2xl mx-auto text-lg">
-              A collection of projects that showcase my skills, creativity, and passion for building exceptional digital experiences
-            </p>
           </div>
 
           {/* Projects Grid */}

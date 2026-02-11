@@ -6,13 +6,15 @@ import { ProjectsSection } from "@/components/ProjectsSection";
 import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
 import { ScrollProgress } from "@/components/ScrollProgress";
+import { StarField } from "@/components/StarField";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background relative">
+      <StarField />
       <ScrollProgress />
       <Navigation />
-      <main>
+      <main className="relative z-10">
         <HeroSection />
         <AboutSection />
         <SkillsSection />

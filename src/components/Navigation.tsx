@@ -14,7 +14,7 @@ export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // Scroll listener (optimized)
+  // Scroll listener
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -51,19 +51,18 @@ export function Navigation() {
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <a
-              href="#"
-              className="group flex items-center gap-2 font-display font-bold tracking-tight text-foreground hover:text-primary transition-colors relative"
-            >
-              {/* Logo icon */}
-              <div className="w-10 h-10 rounded-lg bg-gradient-primary/20 border border-primary/40 overflow-hidden flex items-center justify-center group-hover:border-primary/80 group-hover:bg-gradient-primary/30 transition-all duration-300">
-                <img src="/favicon.ico" alt="Logo" className="w-7 h-7 object-contain" />
-              </div>
-              
-             
-              
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-primary group-hover:w-full transition-all duration-300" />
-            </a>
+            <div className="flex items-center gap-4">
+              <a
+                href="#"
+                className="group flex items-center gap-2 font-display font-bold tracking-tight text-foreground hover:text-primary transition-colors relative"
+              >
+                {/* Logo icon */}
+                <div className="w-10 h-10 rounded-lg bg-gradient-primary/20 border border-primary/40 overflow-hidden flex items-center justify-center group-hover:border-primary/80 group-hover:bg-gradient-primary/30 transition-all duration-300">
+                  <img src="/favicon.ico" alt="Logo" className="w-7 h-7 object-contain" />
+                </div>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-primary group-hover:w-full transition-all duration-300" />
+              </a>
+            </div>
 
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center gap-8">
@@ -82,7 +81,7 @@ export function Navigation() {
 
               <Button variant="hero" size="sm" asChild>
                 <a
-                  href="https://drive.google.com/file/d/1ogtYmgHvA5KvqM93sEZGLnqG3D6i301V/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1N6ymRfrGlAjYNSuUumhj6nBNBBXsSj17/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -98,7 +97,9 @@ export function Navigation() {
               <button
                 aria-label="Toggle Navigation Menu"
                 aria-expanded={isMobileMenuOpen}
-                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                onClick={() => {
+                  setIsMobileMenuOpen(!isMobileMenuOpen);
+                }}
                 className="relative flex items-center justify-center w-10 h-10 rounded-xl border border-border bg-background/60 hover:bg-accent transition-all focus-visible:ring-2 focus-visible:ring-primary"
               >
                 <span className="absolute inset-0 grid place-items-center transition-all duration-300">
@@ -125,7 +126,9 @@ export function Navigation() {
                 <a
                   key={link.name}
                   href={link.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={() => {
+                    setIsMobileMenuOpen(false);
+                  }}
                   className="text-foreground bg-muted/40 hover:bg-primary/10 border border-transparent hover:border-primary/20 px-4 py-3 rounded-xl text-sm tracking-wide font-medium text-center transition-all"
                 >
                   {link.name}
@@ -139,7 +142,7 @@ export function Navigation() {
                 asChild
               >
                 <a
-                  href="https://drive.google.com/file/d/1ogtYmgHvA5KvqM93sEZGLnqG3D6i301V/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1N6ymRfrGlAjYNSuUumhj6nBNBBXsSj17/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

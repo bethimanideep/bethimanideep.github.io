@@ -13,13 +13,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<Theme>(() => {
     // Check localStorage for saved theme
     const savedTheme = localStorage.getItem('theme') as Theme | null;
-    if (savedTheme) {
-      return savedTheme;
-    }
-    
-    // Check system preference
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    return prefersDark ? 'dark' : 'light';
+    return savedTheme || 'dark';
   });
   const [mounted, setMounted] = useState(false);
 
