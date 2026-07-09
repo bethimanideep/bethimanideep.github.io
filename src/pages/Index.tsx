@@ -1,4 +1,4 @@
-import { Navigation } from "@/components/Navigation";
+import { BottomNav } from "@/components/SideNav";
 import { HeroSection } from "@/components/HeroSection";
 import { AboutSection } from "@/components/AboutSection";
 import { SkillsSection } from "@/components/SkillsSection";
@@ -13,13 +13,28 @@ const Index = () => {
     <div className="min-h-screen bg-background relative">
       <StarField />
       <ScrollProgress />
-      <Navigation />
+      <BottomNav />
+
       <main className="relative z-10">
-        <HeroSection />
-        <AboutSection />
-        <SkillsSection />
-        <ProjectsSection />
-        <ContactSection />
+        <div id="hero">
+          <HeroSection />
+        </div>
+        
+        <div id="about">
+          <AboutSection />
+        </div>
+        
+        <div id="skills">
+          <SkillsSection />
+        </div>
+        
+        <div id="projects">
+          <ProjectsSection />
+        </div>
+        
+        <div id="contact">
+          <ContactSection />
+        </div>
       </main>
       <Footer />
     </div>

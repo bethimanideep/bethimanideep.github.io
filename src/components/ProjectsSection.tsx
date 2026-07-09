@@ -256,7 +256,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
 
 export function ProjectsSection() {
   return (
-    <section id="projects" className="py-10 md:py-10 relative overflow-hidden">
+    <section className="py-10 md:py-10 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-subtle opacity-20" />
       <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />

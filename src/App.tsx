@@ -6,11 +6,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "@/context/ThemeContext";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import Cursor from "@/components/Cursor";
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <ThemeProvider>
+    <Cursor />
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />

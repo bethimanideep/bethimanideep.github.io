@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { ThemeToggle } from "@/components/ThemeToggle";
 
 const navLinks = [
   { name: "About", href: "#about" },
@@ -40,11 +39,10 @@ export function Navigation() {
       )}
 
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled
-            ? "bg-background/80 backdrop-blur-xl border-b border-border/60 shadow-sm"
-            : "bg-transparent"
-        }`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+          ? "bg-background/80 backdrop-blur-xl border-b border-border/60 shadow-sm"
+          : "bg-transparent"
+          }`}
         role="navigation"
         aria-label="Main Navigation"
       >
@@ -77,8 +75,6 @@ export function Navigation() {
                 </a>
               ))}
 
-              <ThemeToggle />
-
               <Button variant="hero" size="sm" asChild>
                 <a
                   href="https://drive.google.com/file/d/1N6ymRfrGlAjYNSuUumhj6nBNBBXsSj17/view?usp=sharing"
@@ -92,8 +88,6 @@ export function Navigation() {
 
             {/* Mobile Icon Toggle */}
             <div className="flex items-center gap-4 md:hidden">
-              <ThemeToggle />
-
               <button
                 aria-label="Toggle Navigation Menu"
                 aria-expanded={isMobileMenuOpen}
@@ -115,11 +109,10 @@ export function Navigation() {
 
           {/* Mobile Drawer */}
           <div
-            className={`md:hidden absolute left-0 right-0 top-16 z-50 border-t border-border bg-background shadow-xl transition-all duration-300 ${
-              isMobileMenuOpen
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 -translate-y-5 pointer-events-none"
-            }`}
+            className={`md:hidden absolute left-0 right-0 top-16 z-50 border-t border-border bg-background shadow-xl transition-all duration-300 ${isMobileMenuOpen
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 -translate-y-5 pointer-events-none"
+              }`}
           >
             <div className="container mx-auto px-6 py-5 flex flex-col gap-3">
               {navLinks.map((link) => (

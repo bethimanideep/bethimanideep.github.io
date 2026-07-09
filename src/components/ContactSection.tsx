@@ -47,7 +47,7 @@ export function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-10 md:py-10 relative overflow-hidden">
+    <section className="py-10 md:py-10 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-card/20" />
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
@@ -78,23 +78,23 @@ export function ContactSection() {
                   <a
                     key={item.label}
                     href={item.href}
-                    className="group relative flex items-center gap-4 p-5 rounded-2xl bg-card/50 border border-border hover:border-primary/50 transition-all duration-300 hover-lift overflow-hidden"
+                    className="group relative flex items-center gap-3 sm:gap-4 p-4 sm:p-5 rounded-2xl bg-card/50 border border-border hover:border-primary/50 transition-all duration-300 hover-lift overflow-hidden w-full"
                   >
                     {/* Gradient background on hover */}
                     <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-5 transition-opacity duration-300" />
                     
-                    <div className="relative z-10 p-3 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 group-hover:scale-110">
-                      <item.icon size={22} />
+                    <div className="relative z-10 p-2.5 sm:p-3 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 group-hover:scale-110 shrink-0">
+                      <item.icon size={20} className="sm:w-[22px] sm:h-[22px]" />
                     </div>
-                    <div className="relative z-10 flex-1">
-                      <p className="text-xs text-muted-foreground font-body uppercase tracking-wider mb-1">
+                    <div className="relative z-10 flex-1 min-w-0">
+                      <p className="text-[10px] sm:text-xs text-muted-foreground font-body uppercase tracking-wider mb-1">
                         {item.label}
                       </p>
-                      <p className="text-foreground font-body font-semibold text-lg">
+                      <p className="text-foreground font-body font-semibold text-sm sm:text-base md:text-lg break-all">
                         {item.value}
                       </p>
                     </div>
-                    <div className="relative z-10 text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="relative z-10 text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300 shrink-0 hidden sm:block">
                       →
                     </div>
                   </a>
@@ -116,11 +116,11 @@ export function ContactSection() {
             <div className="lg:col-span-3">
               <form
                 onSubmit={handleSubmit}
-                className="relative p-8 rounded-3xl bg-card/50 backdrop-blur-sm border border-border hover:border-primary/30 transition-all duration-300"
+                className="relative p-5 sm:p-8 rounded-2xl sm:rounded-3xl bg-card/50 backdrop-blur-sm border border-border hover:border-primary/30 transition-all duration-300"
               >
                 {/* Decorative elements */}
-                <div className="absolute top-0 right-0 w-32 h-32 border-t-2 border-r-2 border-primary/20 rounded-tr-3xl" />
-                <div className="absolute bottom-0 left-0 w-24 h-24 border-b-2 border-l-2 border-accent/20 rounded-bl-3xl" />
+                <div className="absolute top-0 right-0 w-32 h-32 border-t-2 border-r-2 border-primary/20 rounded-tr-3xl hidden sm:block" />
+                <div className="absolute bottom-0 left-0 w-24 h-24 border-b-2 border-l-2 border-accent/20 rounded-bl-3xl hidden sm:block" />
                 <div className="relative z-10 grid sm:grid-cols-2 gap-6 mb-6">
                   <div className="space-y-2">
                     <label className="block text-sm font-body font-medium text-foreground">
