@@ -4,7 +4,6 @@ import { AboutSection } from "@/components/AboutSection";
 import { SkillsSection } from "@/components/SkillsSection";
 import { ProjectsSection } from "@/components/ProjectsSection";
 import { ContactSection } from "@/components/ContactSection";
-import { Footer } from "@/components/Footer";
 import { ScrollProgress } from "@/components/ScrollProgress";
 import { StarField } from "@/components/StarField";
 
@@ -36,7 +35,6 @@ const Index = () => {
           <ContactSection />
         </div>
       </main>
-      <Footer />
     </div>
   );
 };

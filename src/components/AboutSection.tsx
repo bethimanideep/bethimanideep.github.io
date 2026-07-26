@@ -13,13 +13,13 @@ const highlights = [
   },
   {
     icon: Rocket,
-    title: "Performance",
-    description: "Optimizing for speed and efficiency",
+    title: "Cloud & AI Solutions",
+    description: "Deploying production-ready cloud infrastructure, LLM integrations, and robust APIs",
   },
 ];
 
 const stats = [
-  { icon: Briefcase, value: "2", label: "Years Experience" },
+  { icon: Briefcase, value: "2+", label: "Years Experience" },
   { icon: Award, value: "10+", label: "Projects Completed" },
   { icon: Users, value: "100%", label: "Client Satisfaction" },
 ];
@@ -71,12 +71,12 @@ export function AboutSection() {
               {/* Bio Text Column */}
               <div className="col-span-1 md:col-span-7 space-y-6 text-center md:text-left order-2 md:order-2">
                 <p className="text-lg md:text-xl text-muted-foreground font-body leading-relaxed">
-                  As a <span className="text-foreground font-semibold">Software Engineer</span> at Reva Solutions, I specialize in building
-                  full-stack applications with modern technologies including React, Next.js, Node.js, and AI/LLM frameworks.
+                  As a <span className="text-foreground font-semibold">Full Stack Web Developer</span> with 2+ years of experience, I specialize in building
+                  scalable, high-performance web applications using React, Next.js, Node.js, and AI/LLM frameworks.
                   My expertise spans frontend development, backend engineering, cloud solutions, and AI-powered applications.
                 </p>
                 <p className="text-lg md:text-xl text-muted-foreground font-body leading-relaxed">
-                  I have hands-on experience with GIS solutions, SharePoint integrations, document management systems,
+                  I have hands-on experience with GIS solutions, enterprise integrations, document management systems,
                   and AI-powered document processing. I'm passionate about solving complex technical challenges and
                   delivering scalable, secure solutions that create real business value.
                 </p>
