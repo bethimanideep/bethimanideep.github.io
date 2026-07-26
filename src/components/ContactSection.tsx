@@ -32,7 +32,7 @@ export function ContactSection() {
   return (
     <section className="pt-16 pb-32 md:pt-20 md:pb-40 relative overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute inset-0 bg-card/20" />
+      <div className="absolute bg-card/20" />
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
       <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-accent/5 rounded-full blur-3xl" />
 

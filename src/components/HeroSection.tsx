@@ -22,7 +22,7 @@ function RollingText({ text, className }: { text: string; className?: string }) 
 // Floating particles component
 function FloatingParticles() {
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none">
+    <div className="absolute  overflow-hidden pointer-events-none">
       {Array.from({ length: 20 }).map((_, i) => (
         <div
           key={i}
@@ -66,7 +66,7 @@ export function HeroSection() {
   return (
     <section className="min-h-[85vh] flex items-center justify-center relative overflow-hidden py-12">
       {/* Enhanced Background Elements - Made transparent to show StarField */}
-      <div className="absolute inset-0 bg-transparent" />
+      <div className="absolute  bg-transparent" />
 
 
       {/* Animated gradient orbs that follow mouse */}
@@ -88,7 +88,7 @@ export function HeroSection() {
       <FloatingParticles />
 
       {/* Grid Pattern Overlay */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] opacity-30" />
+      <div className="absolute  bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] opacity-30" />
 
       <div className="container mx-auto px-6 relative z-10 flex flex-col items-center justify-center text-center">
         <div className="max-w-4xl mx-auto">
@@ -129,7 +129,7 @@ export function HeroSection() {
               >
                 {/* Shining Shimmer Effect sliding across the line */}
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/80 to-transparent"
+                  className="absolute  bg-gradient-to-r from-transparent via-white/80 to-transparent"
                   style={{ width: "30%" }}
                   animate={{
                     left: ["-30%", "110%"],

@@ -152,7 +152,7 @@ function TimelineCard({
                 className="w-full h-full object-cover brightness-[0.95]"
                 draggable={false}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-70" />
+              <div className="absolute  bg-gradient-to-t from-background via-transparent to-transparent opacity-70" />
 
               {/* Floating Project Number */}
               <span className="absolute top-4 right-4 text-foreground/20 font-mono text-xs tracking-widest font-bold">
@@ -244,9 +244,9 @@ export function ProjectsSection() {
   return (
     <section className="py-16 md:py-24 relative overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-subtle opacity-20" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,hsl(var(--primary)/0.08),transparent_60%)] pointer-events-none" />
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:40px_40px] opacity-30 pointer-events-none" />
+      <div className="absolute  bg-gradient-subtle opacity-20" />
+      <div className="absolute  bg-[radial-gradient(circle_at_50%_0%,hsl(var(--primary)/0.08),transparent_60%)] pointer-events-none" />
+      <div className="absolute  bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:40px_40px] opacity-30 pointer-events-none" />
 
       <div className="max-w-6xl mx-auto px-6 md:px-12 relative z-10">
         {/* Section Header (Olentra-style) */}

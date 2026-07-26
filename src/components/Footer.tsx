@@ -12,8 +12,8 @@ export function Footer() {
   return (
     <footer className="relative py-16 border-t border-border bg-card/30">
       {/* Background decoration */}
-      <div className="absolute inset-0 bg-gradient-subtle opacity-20" />
-      
+      <div className="absolute bg-gradient-subtle opacity-20" />
+
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-3 gap-8 mb-12">

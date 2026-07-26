@@ -28,7 +28,7 @@ export function AboutSection() {
   return (
     <section className="py-10 md:py-10 relative overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-subtle opacity-30" />
+      <div className="absolute  bg-gradient-subtle opacity-30" />
       <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-accent/5 rounded-full blur-3xl" />
 
@@ -55,7 +55,7 @@ export function AboutSection() {
                   {/* Subtle ambient glow behind image */}
                   <div className="absolute -inset-4 bg-gradient-primary rounded-3xl opacity-15 blur-2xl group-hover:opacity-30 transition-opacity duration-500" />
                   <div className="relative aspect-square rounded-3xl bg-secondary/30 overflow-hidden border border-border/50 backdrop-blur-sm shadow-2xl">
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10" />
+                    <div className="absolute  bg-gradient-to-br from-primary/10 via-transparent to-accent/10" />
                     <img
                       src="/Mani.jpg"
                       alt="Manideep Bethi"
@@ -115,8 +115,8 @@ export function AboutSection() {
                 className="group relative p-6 rounded-2xl bg-card/50 border border-border hover:border-primary/50 transition-all duration-500 hover-lift overflow-hidden"
               >
                 {/* Background gradient on hover */}
-                <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-5 transition-opacity duration-500" />
-                
+                <div className="absolute  bg-gradient-primary opacity-0 group-hover:opacity-5 transition-opacity duration-500" />
+
                 <div className="relative z-10 flex flex-col items-start gap-4">
                   <div className="p-4 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 group-hover:scale-110">
                     <item.icon size={28} />
